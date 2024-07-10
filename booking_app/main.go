@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main(){
 	eventname := "digital gandhi"
@@ -36,6 +39,20 @@ func main(){
 	fmt.Printf("thank you %v %v for booking %v tickets for %v event, you will receive a confirmation email at %v ",firstname, lastname, userticket, eventname, email)	
 	fmt.Printf("remaining tickets %v", remainingtickets)
 
+	firstnames := []string{}
+	for _, val := range bookings{
+		var fname=strings.Fields(val)
+		
+		firstnames =append(firstnames, fname[0])
+
+	} //index and value in bookings in range
+	fmt.Printf("the first names of bookings are %v \n",firstnames)
+	if remainingtickets==0 {
+		fmt.Println("event is booked out")
+		break
 	}
+	}
+	
 }
+
 
