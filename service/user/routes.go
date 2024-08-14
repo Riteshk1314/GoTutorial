@@ -1,4 +1,9 @@
 package user
+import(
+	"github.com/gorilla/mux"
+	"fmt"
+	"net/http"
+)
 
 type Handler struct {
 
@@ -18,6 +23,6 @@ func (h *Handler) handlelogin(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("login")
 }
 
-func (h *Handler) handlelogin(w http.ResponseWriter, r *http.Request) {
+func (h *Handler) handleRegister(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("login")
 }

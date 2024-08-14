@@ -2,7 +2,9 @@ package api
 
 import (
 	"database/sql"
+	"log"
 	"net/http"
+	
 	"github.com/gorilla/mux"
 )
 type APIServer struct {
@@ -24,6 +26,7 @@ func (s *APIServer) Run() error {
 	userHandler := user.NewHandler()
 	userHandler.RegisterRoutes(subrouter)
 
+	log.Println("lissing on port", s.addr)
 	return http.ListenAndServe(s.addr, router)
 
 
