@@ -1,3 +1,3 @@
-module booking_app
+module ecomm
 
 go 1.22.5
